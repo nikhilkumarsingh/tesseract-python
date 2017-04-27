@@ -1,5 +1,5 @@
 # tesseract-python
-Examples to implement tesseract-ocr using Python
+Examples to implement OCR(Optical Character Recognition) using tesseract using Python
 
 ## Installation:
 - Install tesserct-ocr using this command:
