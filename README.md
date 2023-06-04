@@ -37,3 +37,11 @@ Examples to implement OCR(Optical Character Recognition) using tesseract using P
   ```
   pip install wand
   ```
+
+## Troubleshooting
+- In case you encounter an exception `wand.exceptions.PolicyError`, you can try the following command to change the policy in `/etc/ImageMagick-6/policy.xml` for PDFs to `read`:
+    - On Ubuntu
+    ```
+    sudo sed -i 's,<policy domain="coder" rights="none" pattern="PDF" />,<policy domain="coder" rights="read" pattern="PDF" />,g' /etc/ImageMagick-6/policy.xml
+    ```
+    - This command modifies the policy file for ImageMagick, allowing it to read PDF files without raising a `wand.exceptions.PolicyError`.
